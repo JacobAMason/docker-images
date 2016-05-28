@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:trusty
 MAINTAINER Jacob Mason "jacob@jacobmason.net"
 #ORIGINAL MAINTAINER Nic Roland "nicroland9@gmail.com"
 
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y libxcb-keysyms1-dev libxcb-image0-dev \
     libxcb-xkb-dev libxslt1-dev libgstreamer-plugins-base0.10-dev wget
 
 # Download script
-RUN wget http://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run
+RUN wget http://download.qt.io/official_releases/qt/5.6/5.6.0/qt-opensource-linux-x64-5.6.0.run
 RUN chmod +x ./qt-unified-linux-x64-online.run
 
 # Run installer as entrypoint
